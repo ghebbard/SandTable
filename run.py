@@ -425,10 +425,10 @@ def main():
         interface.currently_displayed.clear()
         interface.currently_displayed.extend((("....", 2, 8)))
 
-        process_new_files(Dir="/home/pi/Sand-Table/")
+        process_new_files(Dir="/home/pi/SandTable/")
 
-        # files = get_files(Dir="/home/pi/Sand-Table/")
-        with open("/home/pi/Sand-Table/filenames.txt", "r") as f:
+        # files = get_files(Dir="/home/pi/SandTable/")
+        with open("/home/pi/SandTable/filenames.txt", "r") as f:
             content = f.readlines()
         files = [line.rstrip('\n') for line in content]
         shuffle(files)
@@ -482,7 +482,7 @@ def main():
                 interface.currently_displayed.clear()
                 interface.currently_displayed.extend((("Reading file....", 2, 0), (f, 3, 0)))
 
-                track = read_track(f, Dir="/home/pi/Sand-Table/")
+                track = read_track(f, Dir="/home/pi/SandTable/")
 
 #                if not interface.displaying_options:
 #                    lcd_display.lcd_clear()
